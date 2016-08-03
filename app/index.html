@@ -20,8 +20,25 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    
-
+    <nav class="navbar navbar-default navbar-fix-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <strong class="navbar-brand">口袋对战数据管理平台</strong>
+        </div>        
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 登录 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+      </ul>       
+      </div>
+    </nav>
     <div class="container">
       <div ng-view=""></div>
     </div>
@@ -52,6 +69,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
