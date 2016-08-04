@@ -17,21 +17,31 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router',
+    'MenuModule'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  .config(function ($stateProvider,$urlRouterProvider) {
+    $urlRouterProvider.otherwise('/index');
+    $stateProvider.state("index",{
+      url: '/index',
+      views: {
+        '': {
+          templateUrl: 'views/main.html'
+        },
+        'menu@index': {
+          templateUrl: 'views/menu.html'
+        },
+        'content@index': {
+          templateUrl: 'views/content.html'
+        }
+      }      
+    })
+    .state("about",{
+      url: '/about',
+      templateUrl:'views/about.html'
+    })
+  })
+  .run(function($rootScope){
+    $rootScope.loginUser = null;
   });
