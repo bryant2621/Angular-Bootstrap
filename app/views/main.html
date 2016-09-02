@@ -1,4 +1,9 @@
-<div class="row">
-  <div class="col-md-2 menu-container" ui-view="menu"></div>
-  <div class="col-md-10 content-container" ui-view="content"></div>
-</div>
+<div ui-view="topbar"></div>
+<div class="stage">
+	<div class="menu-container">
+		<div ui-view="menu"></div>
+	</div>
+	<div class="content-container">
+		<div ui-view="content"></div>
+	</div>
+</div>	

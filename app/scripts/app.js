@@ -34,6 +34,9 @@ angular
         },
         'content@index': {
           templateUrl: 'views/content.html'
+        },
+        'topbar@index': {
+          templateUrl: 'views/topbar.html'
         }
       }      
     })
